@@ -45,7 +45,7 @@ export default async function handler(
         res.status(200).json({
           type: "form",
           title: "Cast AI Editor",
-          url: `https://apps.recaster.org/demo?token=${token}&state=${data.untrustedData.state}`, // save to db? maybe too long?
+          url: `https://composer-action.vercel.app/demo?token=${token}&state=${data.untrustedData.state}`, // save to db? maybe too long?
         });
         return;
       }
@@ -57,8 +57,8 @@ export default async function handler(
       name: "Cast AI Editor",
       icon: "pencil",
       description: "Use AI to help you create cast",
-      aboutUrl: "https://apps.recaster.org/",
-      imageUrl: "https://apps.recaster.org/_images/editor.png",
+      aboutUrl: "https://composer-action.vercel.app/",
+      imageUrl: "https://composer-action.vercel.app/bear.png",
       action: {
         type: "post",
       },
