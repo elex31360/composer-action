@@ -1,4 +1,4 @@
-import { env } from "~/env";
+import { env } from "@/env";
 import * as crypto from "crypto-js";
 
 export function decryptFid(token: string): number {
@@ -16,7 +16,7 @@ export function decryptFid(token: string): number {
 export function encryptFid(fid: number) {
   const encrypted = crypto.AES.encrypt(
     fid.toString(),
-    env.SECRERT_KEY,
+    env.SECRERT_KEY
   ).toString();
   return encrypted.replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 }

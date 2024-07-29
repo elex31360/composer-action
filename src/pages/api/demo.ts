@@ -45,7 +45,7 @@ export default async function handler(
         res.status(200).json({
           type: "form",
           title: "Cast AI Editor",
-          url: `https://apps.recaster.org/editor?token=${token}&state=${data.untrustedData.state}`, // save to db? maybe too long?
+          url: `https://apps.recaster.org/demo?token=${token}&state=${data.untrustedData.state}`, // save to db? maybe too long?
         });
         return;
       }
