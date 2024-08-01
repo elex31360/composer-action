@@ -47,9 +47,15 @@ export default async function handler(
     // const stateString = JSON.stringify(t.cast);
     // console.log(stateString);
     res.status(200).json({
-      type: "form",
-      title: "Cast AI Editor",
-      url: `https://composer-action.vercel.app/demo`, // save to db? maybe too long?
+      type: "composer",
+      name: "Cast AI Editor",
+      icon: "pencil",
+      description: "Use AI to help you create cast",
+      aboutUrl: "https://apps.recaster.org/",
+      imageUrl: "https://apps.recaster.org/_images/editor.png",
+      action: {
+        type: "post",
+      },
     });
     //       return;
     //     }
