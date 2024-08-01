@@ -29,9 +29,6 @@ export default async function handler(
       };
     };
     console.log(data, "data");
-    const messageBytes = data.trustedData.messageBytes;
-    const result = await neynarClient.validateFrameAction(messageBytes);
-    const token = encryptFid(result.action.interactor.fid);
 
     // const messageBytes = data.trustedData.messageBytes;
     // const result = await neynarClient.validateFrameAction(messageBytes);
@@ -52,7 +49,7 @@ export default async function handler(
     res.status(200).json({
       type: "form",
       title: "Cast AI Editor",
-      url: `https://apps.recaster.org/notcoin?token=${token}`, // save to db? maybe too long?
+      url: `https://apps.recaster.org/notcoin`, // save to db? maybe too long?
     });
     //       return;
     //     }
