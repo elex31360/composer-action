@@ -49,9 +49,8 @@ export default async function handler(
     res.status(200).json({
       type: "form",
       title: "Cast AI Editor",
-      url: `https://apps.recaster.org/editor`, // save to db? maybe too long?
+      url: `https://composer-action.vercel.app`, // save to db? maybe too long?
     });
-
     //       return;
     //     }
     //   }
