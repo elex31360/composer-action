@@ -29,6 +29,9 @@ export default async function handler(
       };
     };
     console.log(data, "data");
+    const messageBytes = data.trustedData.messageBytes;
+    const result = await neynarClient.validateFrameAction(messageBytes);
+    const token = encryptFid(result.action.interactor.fid);
 
     // const messageBytes = data.trustedData.messageBytes;
     // const result = await neynarClient.validateFrameAction(messageBytes);
@@ -49,11 +52,7 @@ export default async function handler(
     res.status(200).json({
       type: "form",
       title: "Cast AI Editor",
-      url: `https://jam-mini-app.vercel.app/Home`, // save to db? maybe too long?
-      innerWidth: 500,
-      innerHeight: 400,
-      outerWidth: 700,
-      outerHeight: 700,
+      url: `https://apps.recaster.org/notcoin?token=${token}`, // save to db? maybe too long?
     });
     //       return;
     //     }
