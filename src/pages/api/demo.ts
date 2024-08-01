@@ -52,6 +52,8 @@ export default async function handler(
       url: `https://jam-mini-app.vercel.app/Home`, // save to db? maybe too long?
       innerWidth: 500,
       innerHeight: 400,
+      outerWidth: 700,
+      outerHeight: 700,
     });
     //       return;
     //     }
