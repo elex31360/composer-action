@@ -50,6 +50,8 @@ export default async function handler(
       type: "form",
       title: "Cast AI Editor",
       url: `https://jam-mini-app.vercel.app/Home`, // save to db? maybe too long?
+      innerWidth: 500,
+      innerHeight: 400,
     });
     //       return;
     //     }
