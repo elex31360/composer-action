@@ -51,7 +51,7 @@ export default async function handler(
     icon: "pencil",
     type: "form",
     title: "Cast AI Editor",
-    url: `https://jam-mini-app.vercel.app/Home`, // save to db? maybe too long?
+    url: `http://localhost:4001/Home`, // save to db? maybe too long?
     action: {
       type: "post",
     },
