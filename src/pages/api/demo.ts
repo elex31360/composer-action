@@ -47,9 +47,14 @@ export default async function handler(
   // const stateString = JSON.stringify(t.cast);
   // console.log(stateString);
   res.status(200).json({
+    name: "Cast AI Editor",
+    icon: "pencil",
     type: "form",
     title: "Cast AI Editor",
     url: `https://jam-mini-app.vercel.app/Home`, // save to db? maybe too long?
+    action: {
+      type: "post",
+    },
   });
   //       return;
   //     }
